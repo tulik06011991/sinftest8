@@ -1,16 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Index = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Brauzer muhitida ishlayotganligimizni tekshirish
+      const savedMode = localStorage.getItem('darkMode');
+      setDarkMode(savedMode === 'true');
+    }
+  }, []);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    if (typeof window !== 'undefined') {
+      // Brauzer muhitida `localStorage` saqlash
+      localStorage.setItem('darkMode', newMode);
+    }
   };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -45,7 +66,7 @@ const Index = () => {
           <div className="p-4">
             <button
               onClick={() => alert('Logging out...')}
-              className="w-full p-2 rounded text-white  hover:bg-white hover:text-blue-500 border border-blue-500 font-semibold"
+              className="w-full p-2 rounded text-white bg-blue-500 hover:bg-white hover:text-blue-500 border border-blue-500 font-semibold"
             >
               Logout
             </button>
