@@ -27,11 +27,12 @@ const Index = () => {
 
   useEffect(() => {
     if (darkMode) {
-      document.body.classList.add('dark');
+      document.documentElement.classList.add('dark'); // HTML elementga qo'shish
     } else {
-      document.body.classList.remove('dark');
+      document.documentElement.classList.remove('dark'); // HTML elementdan o'chirish
     }
   }, [darkMode]);
+  
 
   return (
     <div className={darkMode ? 'dark' : ''}>
