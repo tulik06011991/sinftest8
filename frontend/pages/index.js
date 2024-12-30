@@ -1,61 +1,104 @@
-import React from 'react'
-
-const index = () => {
+export default function Home() {
   return (
-    <div>
+    <main className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center p-6 bg-opacity-10">
+      
+      </nav>
 
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
-        {/* <!-- Carousel wrapper --> */}
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-             {/* <!-- Item 1 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://www.shutterstock.com/image-photo/young-group-gen-z-students-attending-className-2507584013" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
-            {/* <!-- Item 2 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://www.shutterstock.com/image-photo/young-group-gen-z-students-attending-className-2507584013" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
-            {/* <!-- Item 3 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://www.shutterstock.com/image-photo/young-group-gen-z-students-attending-className-2507584013" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
-            {/* <!-- Item 4 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://www.shutterstock.com/image-photo/young-group-gen-z-students-attending-className-2507584013" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
-            
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://www.shutterstock.com/image-photo/young-group-gen-z-students-attending-className-2507584013" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-            </div>
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-20">
+        <h2 className="text-5xl font-extrabold mb-4">
+          Welcome to <span className="text-yellow-300">Our World</span>
+        </h2>
+        <p className="text-lg mb-8">
+          Discover the best solutions for your business with us.
+        </p>
+        <a
+          href="#get-started"
+          className="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300"
+        >
+          Get Started
+        </a>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="bg-white text-gray-800 py-16 px-6 md:px-16 rounded-t-3xl"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-4">About Us</h3>
+          <p className="text-lg">
+            We are a team of experts dedicated to providing high-quality
+            solutions for all your business needs. Join us in building a better
+            future together.
+          </p>
         </div>
-        {/* <!-- Slider indicators --> */}
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </section>
+
+      {/* Services Section */}
+      <section
+        id="services"
+        className="py-16 px-6 md:px-16 bg-gray-100 text-gray-800"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-8">Our Services</h3>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="p-6 bg-white shadow-lg rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Service 1</h4>
+              <p>High-quality and reliable solutions tailored to your needs.</p>
+            </div>
+            <div className="p-6 bg-white shadow-lg rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Service 2</h4>
+              <p>Expert consulting for business growth and innovation.</p>
+            </div>
+            <div className="p-6 bg-white shadow-lg rounded-lg">
+              <h4 className="text-xl font-bold mb-2">Service 3</h4>
+              <p>Cutting-edge technology and seamless integration.</p>
+            </div>
+          </div>
         </div>
-        {/* <!-- Slider controls --> */}
-        <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                </svg>
-                <span className="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                </svg>
-                <span className="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
-    </div>
-  )
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="py-16 px-6 md:px-16 bg-indigo-800 text-white"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-4">Contact Us</h3>
+          <p className="mb-8">Reach out to us for more information.</p>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-3 rounded-lg text-gray-800"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-3 rounded-lg text-gray-800"
+            />
+            <textarea
+              placeholder="Your Message"
+              className="w-full p-3 rounded-lg text-gray-800"
+              rows="4"
+            />
+            <button
+              type="submit"
+              className="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 py-6 text-center">
+        <p>&copy; {new Date().getFullYear()} My Brand. All Rights Reserved.</p>
+      </footer>
+    </main>
+  );
 }
-
-export default index
