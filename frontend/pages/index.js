@@ -5,6 +5,12 @@ export default function Home() {
       <nav className="flex justify-between items-center p-6 bg-opacity-10">
         <h1 className="text-2xl font-bold">My Brand</h1>
         <ul className="flex space-x-6">
+          
+          <li>
+            <a href="#contact" className="  bg-gray-500  border-solid  px-4 py-2 rounded-full ... hover:underline">
+              Signup
+            </a>
+          </li>
           <li>
             <a href="#about" className="hover:underline">
               About
