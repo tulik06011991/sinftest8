@@ -3,7 +3,24 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
       {/* Navbar */}
       <nav className="flex justify-between items-center p-6 bg-opacity-10">
-      
+        <h1 className="text-2xl font-bold">My Brand</h1>
+        <ul className="flex space-x-6">
+          <li>
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#services" className="hover:underline">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:underline">
+              Contact
+            </a>
+          </li>
+        </ul>
       </nav>
 
       {/* Hero Section */}
