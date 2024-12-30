@@ -12,7 +12,7 @@ export default function Home() {
         <ul className="flex space-x-6">
           
           <li>
-            <a href="/login" className="  bg-gray-500  border-solid  px-4 py-2 rounded-full ... hover:underline">
+            <a href="/register" className="  bg-gray-500  border-solid  px-4 py-2 rounded-full ... hover:underline">
               Signup
             </a>
          
@@ -44,7 +44,7 @@ export default function Home() {
           Discover the best solutions for your business with us.
         </p>
         <a
-          href="#get-started"
+          href="/login"
           className="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300"
         >
           Get Started
