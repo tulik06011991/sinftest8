@@ -1,3 +1,8 @@
+import Link from "next/link";
+
+
+
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
@@ -7,9 +12,10 @@ export default function Home() {
         <ul className="flex space-x-6">
           
           <li>
-            <a href="#contact" className="  bg-gray-500  border-solid  px-4 py-2 rounded-full ... hover:underline">
+            <a href="/login" className="  bg-gray-500  border-solid  px-4 py-2 rounded-full ... hover:underline">
               Signup
             </a>
+         
           </li>
           <li>
             <a href="#about" className="hover:underline">
